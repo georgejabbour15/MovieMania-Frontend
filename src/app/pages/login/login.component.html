@@ -1,0 +1,24 @@
+  <div class="parent clearfix">
+    <div class="bg-illustration">
+      <div class="burger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="login">
+      <div class="container">
+        <h1>Login to access to<br />your account</h1>
+        <div class="login-form">
+          <form #loginForm="ngForm" (ngSubmit)="onLoginSubmit(loginForm)">
+            <input type="email" placeholder="E-mail Address" name="email" ngModel required>
+            <input type="password" placeholder="Password" name="password" ngModel required>
+            <div class="forget-pass">
+              <a routerLink="/signup">Signup</a>
+            </div>
+            <button type="submit" class="mx-auto" [disabled]="!loginForm.valid">LOG-IN</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>

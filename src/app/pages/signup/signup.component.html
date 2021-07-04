@@ -1,0 +1,27 @@
+  <div class="parent clearfix">
+    <div class="bg-illustration">
+      <img src="https://i.ibb.co/Pcg0Pk1/logo.png" alt="logo">
+      <div class="burger-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="login">
+      <div class="container">
+        <h1>Create an account</h1>
+        <div class="login-form">
+          <form #signupForm="ngForm" (ngSubmit)="onSignupSubmit(signupForm)">
+            <input type="text" placeholder="First Name" name="firstName" ngModel required>
+            <input type="text" placeholder="Last Name" name="lastName" ngModel required>
+            <input type="email" placeholder="E-mail Address" name="email" ngModel required>
+            <input type="password" placeholder="Password" name="password" ngModel required>
+            <div class="forget-pass">
+              <a routerLink="/login">Login</a>
+            </div>
+            <button type="submit" class="mx-auto" [disabled]="!signupForm.valid">SIGN-UP</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
